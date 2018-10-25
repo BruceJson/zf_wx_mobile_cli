@@ -1,0 +1,14 @@
+# 请参考 https://help.aliyun.com/document_detail/59293.html 了解更多关于release文件的编写方式 
+
+# 构建源码语言类型
+code.language=node8.x
+
+# Docker镜像构建之后push的仓库地址
+docker.file=Dockerfile
+docker.repo=registry.cn-hangzhou.aliyuncs.com/router-project/jsvol
+docker.tag=weixin-${PACKAGE_LABEL}
+
+# 代码 构建命令
+dev.build.command=sh ci-build/build.pc.dev.sh
+release.build.command=sh ci-build/build.pc.release.sh
+build.output=dist/
